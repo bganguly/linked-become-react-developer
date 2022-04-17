@@ -1,9 +1,11 @@
 import './App.css';
+import GithubUserList from './componentsForDataFetch/githubUserList';
 import StarRating from './components/StarRating';
 
 function App() {
   return (
-    <StarRating />
+    <GithubUserList />
+    // <StarRating />
   );
 }
 
