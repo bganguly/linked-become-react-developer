@@ -1,6 +1,6 @@
 const GithubUser = ({user}) => {
   return (
-    <div>
+    <>
       <p>{user.login} </p>
       <p>{user.html_url} </p>
       {user.avatar_url
@@ -11,7 +11,7 @@ const GithubUser = ({user}) => {
             height="200"/>
         </p>
       : null}
-    </div>
+    </>
   )
 }
 
