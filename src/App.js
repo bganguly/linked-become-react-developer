@@ -9,7 +9,7 @@ import StarRating from './components/StarRating';
 function App() {
   const user = {'login':'lukas'}
   const userUsingSpreadOperator = {
-    'login':'lukas', 
+    login:'lukas', 
     html_url:'https://github.com/lukas',
     avatar_url:'https://avatars.githubusercontent.com/u/29?v=4'
   }
