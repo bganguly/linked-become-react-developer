@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import GithubUser from "./githubUser";
 
-const GithubUserById = ({login}) => {
+const GithubUserById = ({user}) => {
   // initialise view with default 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -10,7 +10,7 @@ const GithubUserById = ({login}) => {
   let getData = () => {
     setLoading(true)
     // login is github handle- such as eveporcello or bnaguly etc
-    fetch(`https://api.github.com/users/${login}`)
+    fetch(`https://api.github.com/users/${user.login}`)
     .then((response) => response.json())
     .then(setData)
     .then(() => setLoading (false))
@@ -21,7 +21,7 @@ const GithubUserById = ({login}) => {
   // and guaranteed to run _after_ render
   useEffect(() => {
     getData()
-  },[login])
+  },[user.login])
 
   if (loading) return <h1> Loading.. </h1>
   if (error) return <pre> {JSON.stringify(error,null,2)}</pre>

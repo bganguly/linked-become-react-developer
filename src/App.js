@@ -6,10 +6,11 @@ import GithubUserById from './componentsForDataFetch/githubUserById';
 import StarRating from './components/StarRating';
 
 function App() {
+  const user = {'login':'lukas'}
   return (
     // < CheckBoxUsingHooks />
     // <GithubUserList />
-    <GithubUserById login='gaearon'/>
+    <GithubUserById user={user}/>
     // <StarRating />
   );
 }
