@@ -3,7 +3,7 @@ const GithubUserUsingSpreadOperator = ({login, html_url, avatar_url}) => {
     <>
       <p>{login} </p>
       <p>
-        <a href={html_url}>github link</a>
+        <a href={html_url}>{login}'s github link</a>
       </p>
       {avatar_url
       ? <p>
